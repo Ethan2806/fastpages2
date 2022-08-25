@@ -7,19 +7,13 @@ title: First Markdown Post
 ---
 # About me
 
-## Basic setup
+## My Goals in APCSP
 
-Jekyll requires blog post files to be named according to the following format:
+I took this class because I plan on majoring in computer science in college.  Ever since I was a little kid I was into computers and video games.  I realized that I was more advanced than most people in computers and how to navigate.  I want to learn about coding and python coding so I can take these skills further into college classes and my major.
 
-`YEAR-MONTH-DAY-filename.md`
+## My background life
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `filename` is whatever file name you choose, to remind yourself what this post is about. `.md` is the file extension for markdown files.
-
-The first line of the file should start with a single hash character, then a space, then your title. This is how you create a "*level 1 heading*" in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line `## File names` above.
-
-## Basic formatting
-
-You can use *italics*, **bold**, `code font text`, and create [links](https://www.markdownguide.org/cheat-sheet/). Here's a footnote [^1]. Here's a horizontal rule:
+My name is Ethan Truong and I am 16 years old born on July 28th, 2006.  I live at home with my mom, dad, and my brother.  My brother is a freshman here at this school.  I grew up in the area of Linda Vista with my grandparents and eventually moved out to 4s Ranch.  I love to play basketball and video games on my freetime.  Video games I play include valorant and warzone.  Thanks for reading!
 
 ---
 
