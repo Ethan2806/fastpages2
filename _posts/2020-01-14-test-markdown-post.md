@@ -17,17 +17,8 @@ My name is Ethan Truong and I am 16 years old born on July 28th, 2006.  I live a
 
 ---
 
-## Lists
+## A picture of me
 
-Here's a list:
-
-- item 1
-- item 2
-
-And a numbered list:
-
-1. item 1
-1. item 2
 
 ## Boxes and stuff
 
