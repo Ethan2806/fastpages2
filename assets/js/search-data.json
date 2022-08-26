@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Ethan's Jupyter Notebook Post",
-            "content": "",
+            "content": "print(‘Hello World!’) .",
             "url": "https://ethan2806.github.io/apcsp.github.io/jupyter/2022/08/26/Jupyter-Post.html",
             "relUrl": "/jupyter/2022/08/26/Jupyter-Post.html",
             "date": " • Aug 26, 2022"
