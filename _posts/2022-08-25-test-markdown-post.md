@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: A little bit about me.
 categories: [markdown]
 title: About Me and My Goals in APCSP
 ---
