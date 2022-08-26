@@ -18,7 +18,7 @@ My name is Ethan Truong and I am 16 years old born on July 28th, 2006.  I live a
 ---
 
 ## A picture of me
-
+![]({{site.baseurl}}/images/pictureofme.png"https://ethan2806.github.io/apcsp.github.io)
 
 ## Boxes and stuff
 
