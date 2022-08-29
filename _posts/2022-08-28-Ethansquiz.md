@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Liav's Python Quiz questions
+description: Ethan's Python Quiz questions
 categories: [markdown]
 title: Python Quiz
 ---
