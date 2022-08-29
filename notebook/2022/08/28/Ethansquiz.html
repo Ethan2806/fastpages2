@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Ethan’s Python Quiz questions" />
 <meta property="og:description" content="Ethan’s Python Quiz questions" />
-<link rel="canonical" href="https://ethan2806.github.io/apcsp.github.io/markdown/2022/08/28/Ethansquiz.ipynb" />
-<meta property="og:url" content="https://ethan2806.github.io/apcsp.github.io/markdown/2022/08/28/Ethansquiz.ipynb" />
+<link rel="canonical" href="https://ethan2806.github.io/apcsp.github.io/notebook/2022/08/28/Ethansquiz.html" />
+<meta property="og:url" content="https://ethan2806.github.io/apcsp.github.io/notebook/2022/08/28/Ethansquiz.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-08-28T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Python Quiz" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Ethan’s Python Quiz questions","headline":"Python Quiz","mainEntityOfPage":{"@type":"WebPage","@id":"https://ethan2806.github.io/apcsp.github.io/markdown/2022/08/28/Ethansquiz.ipynb"},"url":"https://ethan2806.github.io/apcsp.github.io/markdown/2022/08/28/Ethansquiz.ipynb"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Ethan’s Python Quiz questions","headline":"Python Quiz","mainEntityOfPage":{"@type":"WebPage","@id":"https://ethan2806.github.io/apcsp.github.io/notebook/2022/08/28/Ethansquiz.html"},"url":"https://ethan2806.github.io/apcsp.github.io/notebook/2022/08/28/Ethansquiz.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/apcsp.github.io/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ethan2806.github.io/apcsp.github.io/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/apcsp.github.io/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -86,7 +86,7 @@ window.onload = wrap_img;
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/apcsp.github.io/categories/#markdown">markdown</a>
+        <a class="category-tags-link" href="/apcsp.github.io/categories/#notebook">notebook</a>
         
       
       </p>
@@ -96,51 +96,53 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-</ul>## Python Quiz:
+<li class="toc-entry toc-h2"><a href="#python-quiz">Python Quiz:</a></li>
+</ul><h2 id="python-quiz">
+<a class="anchor" href="#python-quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Quiz:</h2>
 
-import getpass, sys
+<p>import getpass, sys</p>
 
-def question_with_response(prompt):
-    print("Question: " + prompt)
+<p>def question_with_response(prompt):
+    print(“Question: “ + prompt)
     msg = input()
-    return msg
+    return msg</p>
 
-questions = 3
-correct = 0
+<p>questions = 3
+correct = 0</p>
 
-print('Hello, ' + getpass.getuser() + " running " + sys.executable)
-print("You will be asked " + str(questions) + " questions.")
-question_and_answer("Are you excited and ready to take this quiz?")
+<p>print(‘Hello, ‘ + getpass.getuser() + “ running “ + sys.executable)
+print(“You will be asked “ + str(questions) + “ questions.”)
+question_and_answer(“Are you excited and ready to take this quiz?”)</p>
 
-rsp = question_with_response("What command is used to verify that you installed a tool?")
-if rsp == "-version":
-    print(rsp + " is correct!")
+<p>rsp = question_with_response(“What command is used to verify that you installed a tool?”)
+if rsp == “-version”:
+    print(rsp + “ is correct!”)
     correct += 1
 else:
-    print(rsp + " is incorrect!")
+    print(rsp + “ is incorrect!”)</p>
 
-rsp = question_with_response("How can you verify the packages and versions of tools you've installed with Anaconda?")
-if rsp == "conda list":
-    print(rsp + " is correct!")
+<p>rsp = question_with_response(“How can you verify the packages and versions of tools you’ve installed with Anaconda?”)
+if rsp == “conda list”:
+    print(rsp + “ is correct!”)
     correct += 1
 else:
-    print(rsp + " is incorrect!")
+    print(rsp + “ is incorrect!”)</p>
 
-rsp = question_with_response("What is the code editor we use in class called?")
-if rsp == "VSCode":
-    print(rsp + " is correct!")
+<p>rsp = question_with_response(“What is the code editor we use in class called?”)
+if rsp == “VSCode”:
+    print(rsp + “ is correct!”)
     correct += 1
 else:
-    print(rsp + " is incorrect!")
+    print(rsp + “ is incorrect!”)</p>
 
-print(getpass.getuser() + " you scored " + str(correct) +"/" + str(questions))
+<p>print(getpass.getuser() + “ you scored “ + str(correct) +”/” + str(questions))</p>
 
-def question_and_answer():
-    print("Question: " + prompt)
+<p>def question_and_answer():
+    print(“Question: “ + prompt)
     msg = input()
-    print("Infinitely knowledgable: " + msg)
+    print(“Infinitely knowledgable: “ + msg)</p>
 
-  </div><a class="u-url" href="/apcsp.github.io/markdown/2022/08/28/Ethansquiz.ipynb" hidden></a>
+  </div><a class="u-url" href="/apcsp.github.io/notebook/2022/08/28/Ethansquiz.html" hidden></a>
 </article>
 
       </div>
