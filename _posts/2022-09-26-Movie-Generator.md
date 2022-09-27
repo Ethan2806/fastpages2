@@ -7,7 +7,7 @@ categories: [markdown, csp]
 permalink: /moviegeneratordata/
 ---
 # Movie Generator
-- This is a button that will randomly generate a name from a great player in the NBA
+- This is a button that will randomly generate a movie name 
 
 <button id="1">Click Me!</button>
 <p id="random"></p>
