@@ -1,3 +1,13 @@
+    ---
+keywords: fastai
+description: Scrum Team Roles
+title: Scrum Board 
+toc: true
+categories: [TechTalk]
+tags: [java]
+layout: notebook
+---
+
     Jeffrey: Scrum Master
     Luke: DevOps
     Ethan: Frontend Developer
