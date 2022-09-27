@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: This will generate random movies 
-title: Basketball Data Generator
+title: Movie Data Generator
 categories: [markdown, csp]
 permalink: /moviegeneratordata/
 ---
