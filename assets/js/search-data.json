@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Movie Data Generator",
-            "content": "Movie Generator . This is a button that will randomly generate a movie name | . Click Me! . . Using Javascript, you have to insert in the variables that you want to be included into your random generator. In my case, my variables were a bunch of movies that I decided to use in my project! . .",
+            "content": "Movie Generator . This is a button that will randomly generate a movie name | . Click Me For A Movie! . . Using Javascript, you have to insert in the variables that you want to be included into your random generator. In my case, my variables were a bunch of movies that I decided to use in my project! . .",
             "url": "https://ethan2806.github.io/apcsp.github.io/moviegeneratordata/",
             "relUrl": "/moviegeneratordata/",
             "date": " • Sep 26, 2022"
