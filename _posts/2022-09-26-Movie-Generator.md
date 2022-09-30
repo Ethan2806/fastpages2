@@ -26,4 +26,6 @@ var button = document.getElementById("1")
 Using Javascript, you have to insert in the variables that you want to be included into your random generator. 
 In my case, my variables were a bunch of movies that I decided to use in my project!
 
-![Screenshot 2022-09-29 101559](https://user-images.githubusercontent.com/111910633/193098123-b51e65ce-e129-4fcf-bfe5-fec7067909a6.png)
+
+![image](https://user-images.githubusercontent.com/111910633/193318415-1a770cec-cd19-4261-a297-9e49c54f81b3.png)
+
