@@ -9,7 +9,7 @@ permalink: /moviegeneratordata/
 # Movie Generator
 - This is a button that will randomly generate a movie name 
 
-<button id="1">Click Me!</button>
+<button id="1">Click Me For A Movie!</button>
 <p id="random"></p>
 
 <script> 
