@@ -66,4 +66,5 @@ Phases of the dev process include:
 
 
 ## Completed Program Design and Development Video Quiz:
-![]({{site.baseurl}}/images/1.3quiz.png "https://github.com/LiavB2/ominicient-lavebear")
+![image](https://user-images.githubusercontent.com/111910633/194144052-e0e81ca0-24ac-49ab-a309-6cf6b540e4a6.png)
+
