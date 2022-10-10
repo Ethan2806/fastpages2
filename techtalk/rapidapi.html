@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      1 min read
     
 </span></p>
 
@@ -134,9 +134,6 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h3"><a href="#Python,-RapidAPI-Terms">Python, RapidAPI Terms </a></li>
 <li class="toc-entry toc-h3"><a href="#Covid19-RapidAPI-Example">Covid19 RapidAPI Example </a></li>
-<li class="toc-entry toc-h3"><a href="#Digital-Coin-Example">Digital Coin Example </a></li>
-<li class="toc-entry toc-h3"><a href="#Formatting-Digital-Coin-example">Formatting Digital Coin example </a></li>
-<li class="toc-entry toc-h3"><a href="#Go-deeper-into-APIs">Go deeper into APIs </a></li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 </ul><!--
 #################################################
@@ -194,14 +191,19 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://dad-jokes.p.rapidapi.com/random/joke"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://motivational-quotes1.p.rapidapi.com/motivation"</span>
 
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"key1"</span><span class="p">:</span> <span class="s2">"value"</span><span class="p">,</span>
+	<span class="s2">"key2"</span><span class="p">:</span> <span class="s2">"value"</span>
+<span class="p">}</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"content-type"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span>
 	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"97cada0567msh30f120b09c87306p148cacjsn5a7d8d05dc40"</span><span class="p">,</span>
-	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"dad-jokes.p.rapidapi.com"</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"motivational-quotes1.p.rapidapi.com"</span>
 <span class="p">}</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
@@ -216,7 +218,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{"success":true,"body":[{"_id":"60dd36c24c13585cc61b934a","setup":"What’s the difference between Santa Clause and a knight?","punchline":"One slays a dragon, the other drags a sleigh!","type":"knight","likes":[],"author":{"name":"unknown","id":null},"approved":true,"date":1618108661,"NSFW":false,"shareableLink":"https://dadjokes.io/joke/60dd36c24c13585cc61b934a"}]}
+<pre>"Don't think of it as failure. Think of it as time-released success."
+-Robert Orben
 </pre>
 </div>
 </div>
@@ -227,211 +230,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Digital-Coin-Example">
-<a class="anchor" href="#Digital-Coin-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital Coin Example<a class="anchor-link" href="#Digital-Coin-Example"> </a>
-</h3>
-<blockquote>
-<p>This example provides digital coin feedback (ie Bitcoin).  It include popularity, price, symbols, etc.</p>
-<ul>
-<li>A valid X-RapidAPI-Key is required.  Look in code for link to RapidAPI page</li>
-<li>Read all comments in code for further guidance</li>
-</ul>
-</blockquote>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://corona-virus-world-and-india-data.p.rapidapi.com/api"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"97cada0567msh30f120b09c87306p148cacjsn5a7d8d05dc40"</span><span class="p">,</span>
-	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"corona-virus-world-and-india-data.p.rapidapi.com"</span>
-<span class="p">}</span>
-
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"World Totals"</span><span class="p">)</span>
-<span class="n">world</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'world_total'</span><span class="p">)</span>  
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">world</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Country Totals"</span><span class="p">)</span>
-<span class="n">countries</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'countries_stat'</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span> 
-    <span class="k">if</span> <span class="n">country</span><span class="p">[</span><span class="s2">"country_name"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"USA"</span><span class="p">:</span>  
-        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">country</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  
-            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>World Totals
-total_cases 509,268,964
-new_cases 204,268
-total_deaths 6,242,509
-new_deaths 630
-total_recovered 461,827,849
-active_cases 41,198,606
-serious_critical 42,510
-total_cases_per_1m_population 65,334
-deaths_per_1m_population 800.9
-statistic_taken_at 2022-04-24 11:18:01
-
-Country Totals
-country_name USA
-cases 82,649,779
-deaths 1,018,316
-region 
-total_recovered 80,434,925
-new_deaths 0
-new_cases 0
-serious_critical 1,465
-active_cases 1,196,538
-total_cases_per_1m_population 247,080
-deaths_per_1m_population 3,044
-total_tests 1,000,275,726
-tests_per_1m_population 2,990,303
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Formatting-Digital-Coin-example">
-<a class="anchor" href="#Formatting-Digital-Coin-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Formatting Digital Coin example<a class="anchor-link" href="#Formatting-Digital-Coin-example"> </a>
-</h3>
-<blockquote>
-<p>JSON text transferred from the API in the previous cell was converted to a Python Dictionary called json.  The "coins" in the dictionary contain a list of the most relevant data.   Look at the code and comments to see how the original text is turned into something understandable.   Additionally, there are error check to make sure we are starting the code with the expectation that the API was run correctly.</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">This cell is dependent on valid run of API above.</span>
-<span class="sd">- try and except code is making sure "json" was properly run above</span>
-<span class="sd">- inside second try is code that is used to process Coin API data</span>
-
-<span class="sd">Note.  Run this cell repeatedly to format data without re-activating API</span>
-<span class="sd">"""</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"JSON data is Python type: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json</span><span class="p">)))</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Extracting Coins JSON status, if the API worked</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'status'</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"API status: "</span> <span class="o">+</span> <span class="n">status</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">()</span>
-        
-        <span class="c1"># Extracting Coins JSON data, data about the coins</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'data'</span><span class="p">)</span>
-        
-        <span class="c1"># Procedural abstraction of Print code for coins</span>
-        <span class="k">def</span> <span class="nf">print_coin</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">"symbol"</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="s2">"price"</span><span class="p">])</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Icon Url: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="s2">"iconUrl"</span><span class="p">])</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Rank Url: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="s2">"coinrankingUrl"</span><span class="p">])</span>
-
-        <span class="c1"># Coins data was observed to be a list</span>
-        <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">'coins'</span><span class="p">]:</span>
-            <span class="n">print_coin</span><span class="p">(</span><span class="n">coin</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">()</span>
-            
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Did you insert a valid key in X-RapidAPI-Key of API cell above?"</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"This cell is dependent on running API call in cell above!"</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>JSON data is Python type: &lt;class 'dict'&gt;
-Did you insert a valid key in X-RapidAPI-Key of API cell above?
-{'message': 'You are not subscribed to this API.'}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Go-deeper-into-APIs">
-<a class="anchor" href="#Go-deeper-into-APIs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Go deeper into APIs<a class="anchor-link" href="#Go-deeper-into-APIs"> </a>
-</h3>
-<blockquote>
-<p>Web Development vs Jupyter Notebook.  A notebook is certainly a great place to start.  But, for your end of Trimester project we want you to build the skill to reference and use APIs within your Project.  Here are some resources to get you started with this journey.</p>
-</blockquote>
-<ul>
-<li>In the Nighthawk Coders APCSP you can find an Overview and Examples using APIs:<a href="https://nighthawkcoders.github.io/APCSP/api/overview">APCSP APIs menu</a>- Using Covid RapidAPI<ul>
-<li>JavaScript frontend API code in APCSP Fastpages GitHub repo: <a href="https://github.com/nighthawkcoders/APCSP/blob/master/_posts/2022-07-10-PBL-rapidapi.md">https://github.com/nighthawkcoders/APCSP/blob/master/_posts/2022-07-10-PBL-rapidapi.md</a>
-</li>
-</ul>
-</li>
-<li>Making a Jokes API (this will next API tech talk)<ul>
-<li>Frontend. JavaScript frontend code in APCSP fastpages GitHub repo: <a href="https://github.com/nighthawkcoders/APCSP/blob/master/_posts/2022-07-10-PBL-jokes.md">https://github.com/nighthawkcoders/APCSP/blob/master/_posts/2022-07-10-PBL-jokes.md</a>
-</li>
-<li>Backend Endpoints.  Python code that allows Frontend access: <a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/api.py">https://github.com/nighthawkcoders/flask_portfolio/blob/main/api.py</a>
-</li>
-<li>Backend Jokes Management.  Python code that support Create, Read, Update, Delete (CRUD): <a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/model_jokes.py">https://github.com/nighthawkcoders/flask_portfolio/blob/main/model_jokes.py</a>
-</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
