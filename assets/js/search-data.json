@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Collegeboard Quizzes 2",
-            "content": "Quizzes . Here are my scores from the Collegeboard quizzes we took this week: . . I learned a lot about how the internet works and how to correctly identify and fix common programming errors. I scored 100% on both so I didn’t really have much trouble with them. .",
-            "url": "https://ethan2806.github.io/apcsp.github.io/markdown/csp/ap/2022/10/10/Collegeboardquiz.html",
-            "relUrl": "/markdown/csp/ap/2022/10/10/Collegeboardquiz.html",
+            "title": "Identifying and Correcting Errors College Board 1.4 Notes and Quiz",
+            "content": "1.4 College Board Video Notes . 1.4.1 . Errors are innevitable in programming | In errors in an algorithm or program, there are 4 types of errors: Logic Error:A mistake in the algorithm that causes it behave incorrectly or unexpectedly | Syntax Error: A mistake in the program where the rules in the programming language are not followed | Run-time error: Mistake in the program that occurs during the excecution of the program. Dependent on the language. Usually refered to as a bug. | Overflow error: error that occurs when a computer attempts to handle a number that is outside of the defined range of values. | . | . 1.4.2 . Understanding how to correct errors is essential to programming | Best ways to correct errors Test cases | Hand tracing | Visualizations | Debuggers | adding extra output statements. | . | The syntax error is usually the easiest error to fix it tells the programmer which line and what the error was. | . | Logic errors are difficult to find and fix. | . 1.4.3 . Programmers should come up with testing schemes to ensure that their program works. Identify inputs and correspondng exprected outputs or behaviors check the correctness of the algorithm or program. | . | Defined inputs used to test a program should demonstrate the different exprected outcomes that are at or just beyond the min and max of input data | Program requirements identify appropriate defined inputs for testing. | As soon as they start programming, they should constantly be testing. | . Picture of Completion . .",
+            "url": "https://ethan2806.github.io/apcsp.github.io/markdown/2022/10/10/Collegeboardquiz.html",
+            "relUrl": "/markdown/2022/10/10/Collegeboardquiz.html",
             "date": " • Oct 10, 2022"
         }
         
