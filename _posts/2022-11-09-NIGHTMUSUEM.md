@@ -55,3 +55,17 @@ title: Night at the Museum
 # Overall Thoughts
 - I had a very good time at N@TM as I got to see all my friends and compare the projects that we have been working on all trimester.
 - Seeing all the different classes and perspectives of art was very fun, and I overall had a very good time at my first night at the museum
+
+# Fantasy Football Project
+![image](https://user-images.githubusercontent.com/111910633/201157515-324161db-7a8c-4e18-8bb3-bece802cdb52.png)
+
+-He made a page based on football teams 
+-Had a search bar
+-Had all teams with their own personal page
+
+# Star Wars Translated
+![image](https://user-images.githubusercontent.com/111910633/201157767-f6152949-a5a8-48e4-be61-3b9c8dd335e8.png)
+-These guys made a really cool translator for star wars
+
+
+
