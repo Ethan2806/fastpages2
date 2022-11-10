@@ -21,9 +21,6 @@ title: Night at the Museum
 
 - The other CSP project I visited was made by another group from MORT P4.
 - Their program tracks the stocks of a few major companies such as GOOGLE, APPLE, and Tesla, which is also the data from their API.
-
-![image](https://user-images.githubusercontent.com/111910633/201007497-7728f277-ff7a-40cc-b133-c3423b787f77.png)
-
 - You can see this images tracks the stock price of a GOOGL stock price.
 
 # Arts Projects
