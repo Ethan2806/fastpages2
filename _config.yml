@@ -43,10 +43,6 @@ minima:
   #    twitter: NighthawkCoding
   #    github: nighthawkcoders
   #   youtube_channel: UClIKOsDS5dsfzFA3zveDT3Q
-  social_links:
-    - { platform: github, user_url: fastai
-    - { platform: twitter, user_url: fastai
-    - { platform: youtube, user_url: fastai
 
 # Set this to true to get LaTeX math equation support
 use_math: 
