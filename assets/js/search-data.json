@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Conditionals",
-            "content": "Number1 = 20 Number2 = 10 if Number1 &gt; Number2: print(&quot;Number1 is greater than Number2&quot;) . Number1 is greater than Number2 . -Conditional statements may also be called if else statements . Number1 = 20 Number2 = 10 if Number1 &gt; Number2: print(&quot;Number1 is greater than Number2&quot;) else: print(&quot;Number2 is less than Number1&quot;) . Number1 is greater than Number2 . Participation . -Calculate the total sum of two numbers, if the total sum is greater than 200, display 200. If otherwise, display the sum. . num1 = num2 = sum = num1 + num2 . 150 .",
+            "content": "Number1 = 20 Number2 = 10 if Number1 &gt; Number2: print(&quot;Number1 is greater than Number2&quot;) . Number1 is greater than Number2 . -Conditional statements may also be called if else statements . Number1 = 20 Number2 = 10 if Number1 &gt; Number2: print(&quot;Number1 is greater than Number2&quot;) else: print(&quot;Number2 is less than Number1&quot;) . Number1 is greater than Number2 . Participation . -Calculate the total sum of two numbers, if the total sum is greater than 200, display 200. If otherwise, display the sum. . num1 = num2 = sum = num1 + num2 .",
             "url": "https://ethan2806.github.io/apcsp.github.io/2022/11/30/Presentation.html",
             "relUrl": "/2022/11/30/Presentation.html",
             "date": " • Nov 30, 2022"
