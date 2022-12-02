@@ -1,0 +1,263 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Unit 3.3 and 3.4 Notes\n",
+    "{% include Week14.html %}\n",
+    "- toc: true\n",
+    "- comments: true\n",
+    "- type: collegeboard\n",
+    "- week: 14"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "{% include Week14.html %}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Arithmetic Operations\n",
+    "- Addition: (+)\n",
+    "- Subtraction: (-)\n",
+    "- Multiplication (*)\n",
+    "- Division: (/)\n",
+    "- Getting the remainder: (%)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Order of Operations\n",
+    "- Operations in parentheses should be done first\n",
+    "- \" * \" and \" / \" before \" + \" and \" - \"\n",
+    "- \" % \" are similar to \" * \" and \" / \""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Variables\n",
+    "- Sequence is very important \n",
+    "- Tracking variables is commonly used in the AP Exams and is an important thing"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Hacks/Homework"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "50\n",
+      "20\n",
+      "40.4\n",
+      "40.4\n",
+      "20.4\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Evaluate the variable \"result\"\n",
+    "Num1 = 50\n",
+    "Num2 = Num1 % 9 + 15\n",
+    "Num3 = Num2 / Num1 + ( Num2 * 2 )\n",
+    "Num4 = Num3 + Num1 / 5 - 10\n",
+    "Result = Num4 - Num2\n",
+    "\n",
+    "\n",
+    "# 50/9 = 45 R=5; 5 + 15 = 20 = num2\n",
+    "# 2/5 + 40 = 40.4 = num 3\n",
+    "# 40.4 + (50/5) - 10 = 40.4 + 10 - 10 = 40.4 =  num4 \n",
+    "# Result = 40.4 - 20 = 20.4\n",
+    "# Checking answers\n",
+    "\n",
+    "print(Num1)\n",
+    "print(Num2)\n",
+    "print(Num3)\n",
+    "print(Num4)\n",
+    "print(Result)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "4\n",
+      "12\n",
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "Num1 = 10\n",
+    "Num2 = Num1 % 3 * 4\n",
+    "Num1 = Num2\n",
+    "Num3 = Num1 * 3\n",
+    "Result = Num3 % 2\n",
+    "\n",
+    "# num1 = 4\n",
+    "# 10/3 = 1 x 4 = 4 = num2\n",
+    "# 4 x 3 = 12 = num3\n",
+    "# 12/2 = 0 = Result \n",
+    "# Checking answers\n",
+    "\n",
+    "print(Num1)\n",
+    "print(Num2)\n",
+    "print(Num3)\n",
+    "print(Result)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "17\n"
+     ]
+    }
+   ],
+   "source": [
+    "valueA = 4\n",
+    "valueB = 90\n",
+    "valueC = 17\n",
+    "valueB = valueC - valueA\n",
+    "valueA = valueA * 10\n",
+    "if valueB > 10:\n",
+    "    print(valueC)\n",
+    "\n",
+    "# 17 - 4 = 13 \n",
+    "# valueA = 40\n",
+    "# code will print 17 since 13>10\n",
+    "# Checking answers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "straightbrownshort\n"
+     ]
+    }
+   ],
+   "source": [
+    "type = \"curly\"\n",
+    "color = \"brown\"\n",
+    "length = \"short\"\n",
+    "type = \"straight\"\n",
+    "hair = type + color + length\n",
+    "print(hair)\n",
+    "\n",
+    "# Will print straightbrownshort\n",
+    "# Checking answers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "handsome Very Mr.M is.\n"
+     ]
+    }
+   ],
+   "source": [
+    "Noun = \"Mr.Mortenson\" \n",
+    "Adjective = \"handsome\" \n",
+    "Adjective2 = \"Very\" \n",
+    "Verb = \"is\" \n",
+    "abrev = Noun[0:4] \n",
+    "yoda = (Adjective + \" \" + Adjective2 + \" \" + abrev + \" \" + Verb + \".\") \n",
+    "print(yoda)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "chocolate cookie votes: 4.5           rasin cookie votes: 225\n"
+     ]
+    }
+   ],
+   "source": [
+    "cookie = \"chocolate\" \n",
+    "cookie2 = \"rasin\" \n",
+    "len1 = len(cookie) / 2 \n",
+    "len2 = len(cookie2) * 45 \n",
+    "vote1 = (cookie + \" cookie votes: \" + str(len1)) # creating a string \n",
+    "vote2 = (cookie2 + \" cookie votes: \" + str(len2)) # creating a string \n",
+    "votes = (vote1 + \"           \" + vote2) # displaying votes \n",
+    "print(votes)\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3.8.10 64-bit",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.10"
+  },
+  "orig_nbformat": 4,
+  "vscode": {
+   "interpreter": {
+    "hash": "916dbcbb3f70747c44a77c7bcd40155683ae19c65e1c03b4aa3499c5328201f1"
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
