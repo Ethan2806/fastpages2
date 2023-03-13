@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      10 min read
     
 </span></p>
 
@@ -256,79 +256,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/ethan2806/fastpages2/_notebooks/2023-03-13-2.3333.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/ethan2806/fastpages2/_notebooks/2023-03-13-2.3333.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> # reads the JSON file and converts it to a Pandas DataFrame
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/ethan2806/fastpages2/_notebooks/2023-03-13-2.3333.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> df = pd.read_json('files/grade.json')
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/ethan2806/fastpages2/_notebooks/2023-03-13-2.3333.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> print(df)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:207</span>, in <span class="ansi-cyan-fg">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    205</span>     else:
-<span class="ansi-green-intense-fg ansi-bold">    206</span>         kwargs[new_arg_name] = new_arg_value
-<span class="ansi-green-fg">--&gt; 207</span> return func(*args, **kwargs)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    305</span> if len(args) &gt; num_allow_args:
-<span class="ansi-green-intense-fg ansi-bold">    306</span>     warnings.warn(
-<span class="ansi-green-intense-fg ansi-bold">    307</span>         msg.format(arguments=arguments),
-<span class="ansi-green-intense-fg ansi-bold">    308</span>         FutureWarning,
-<span class="ansi-green-intense-fg ansi-bold">    309</span>         stacklevel=stacklevel,
-<span class="ansi-green-intense-fg ansi-bold">    310</span>     )
-<span class="ansi-green-fg">--&gt; 311</span> return func(*args, **kwargs)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/json/_json.py:612</span>, in <span class="ansi-cyan-fg">read_json</span><span class="ansi-blue-fg">(path_or_buf, orient, typ, dtype, convert_axes, convert_dates, keep_default_dates, numpy, precise_float, date_unit, encoding, encoding_errors, lines, chunksize, compression, nrows, storage_options)</span>
-<span class="ansi-green-intense-fg ansi-bold">    609</span>     return json_reader
-<span class="ansi-green-intense-fg ansi-bold">    611</span> with json_reader:
-<span class="ansi-green-fg">--&gt; 612</span>     return json_reader.read()
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/json/_json.py:746</span>, in <span class="ansi-cyan-fg">JsonReader.read</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    744</span>         obj = self._get_object_parser(self._combine_lines(data_lines))
-<span class="ansi-green-intense-fg ansi-bold">    745</span> else:
-<span class="ansi-green-fg">--&gt; 746</span>     obj = self._get_object_parser(self.data)
-<span class="ansi-green-intense-fg ansi-bold">    747</span> self.close()
-<span class="ansi-green-intense-fg ansi-bold">    748</span> return obj
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/json/_json.py:768</span>, in <span class="ansi-cyan-fg">JsonReader._get_object_parser</span><span class="ansi-blue-fg">(self, json)</span>
-<span class="ansi-green-intense-fg ansi-bold">    766</span> obj = None
-<span class="ansi-green-intense-fg ansi-bold">    767</span> if typ == "frame":
-<span class="ansi-green-fg">--&gt; 768</span>     obj = FrameParser(json, **kwargs).parse()
-<span class="ansi-green-intense-fg ansi-bold">    770</span> if typ == "series" or obj is None:
-<span class="ansi-green-intense-fg ansi-bold">    771</span>     if not isinstance(dtype, bool):
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/json/_json.py:880</span>, in <span class="ansi-cyan-fg">Parser.parse</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    878</span>     self._parse_numpy()
-<span class="ansi-green-intense-fg ansi-bold">    879</span> else:
-<span class="ansi-green-fg">--&gt; 880</span>     self._parse_no_numpy()
-<span class="ansi-green-intense-fg ansi-bold">    882</span> if self.obj is None:
-<span class="ansi-green-intense-fg ansi-bold">    883</span>     return None
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/json/_json.py:1133</span>, in <span class="ansi-cyan-fg">FrameParser._parse_no_numpy</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1129</span> orient = self.orient
-<span class="ansi-green-intense-fg ansi-bold">   1131</span> if orient == "columns":
-<span class="ansi-green-intense-fg ansi-bold">   1132</span>     self.obj = DataFrame(
-<span class="ansi-green-fg">-&gt; 1133</span>         loads(json, precise_float=self.precise_float), dtype=None
-<span class="ansi-green-intense-fg ansi-bold">   1134</span>     )
-<span class="ansi-green-intense-fg ansi-bold">   1135</span> elif orient == "split":
-<span class="ansi-green-intense-fg ansi-bold">   1136</span>     decoded = {
-<span class="ansi-green-intense-fg ansi-bold">   1137</span>         str(k): v
-<span class="ansi-green-intense-fg ansi-bold">   1138</span>         for k, v in loads(json, precise_float=self.precise_float).items()
-<span class="ansi-green-intense-fg ansi-bold">   1139</span>     }
-
-<span class="ansi-red-fg">ValueError</span>: Unexpected character found when decoding 'false'</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -371,46 +298,6 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>     GPA
-0   3.57
-1   4.00
-2   2.78
-3   3.45
-4   4.75
-5   3.33
-6   2.95
-7   3.90
-8   3.15
-9   2.80
-10  3.45
-11  2.75
-
-Student ID  GPA
-       123 3.57
-       246 4.00
-       578 2.78
-       469 3.45
-       324 4.75
-       313 3.33
-       145 2.95
-       167 3.90
-       235 3.15
-       nil 2.80
-       469 3.45
-       456 2.75
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -442,46 +329,6 @@ Student ID  GPA
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>   Student ID Year in School   GPA
-11        456             10  2.75
-2         578             12  2.78
-9         nil              9  2.80
-6         145             12  2.95
-8         235      9th Grade  3.15
-5         313             20  3.33
-3         469             11  3.45
-10        469             11  3.45
-0         123             12  3.57
-7         167             10  3.90
-1         246             10  4.00
-4         324         Junior  4.75
-
-   Student ID Year in School   GPA
-4         324         Junior  4.75
-1         246             10  4.00
-7         167             10  3.90
-0         123             12  3.57
-3         469             11  3.45
-10        469             11  3.45
-5         313             20  3.33
-8         235      9th Grade  3.15
-6         145             12  2.95
-9         nil              9  2.80
-2         578             12  2.78
-11        456             10  2.75
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -505,28 +352,6 @@ Student ID  GPA
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>   Student ID Year in School   GPA
-0         123             12  3.57
-1         246             10  4.00
-3         469             11  3.45
-4         324         Junior  4.75
-5         313             20  3.33
-7         167             10  3.90
-8         235      9th Grade  3.15
-10        469             11  3.45
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -555,24 +380,6 @@ Student ID  GPA
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>  Student ID Year in School   GPA
-4        324         Junior  4.75
-
-   Student ID Year in School   GPA
-11        456             10  2.75
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -629,31 +436,6 @@ Student ID  GPA
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>-------------Dict_to_DF------------------
-   calories  duration
-0       420        50
-1       380        40
-2       390        45
-3       400        35
-----------Dict_to_DF_labels--------------
-      calories  duration
-day1       420        50
-day2       380        40
-day3       390        45
-day4       400        35
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -686,27 +468,6 @@ day4       400        35
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>-------Examine Selected Rows---------
-      calories  duration
-day1       420        50
-day3       390        45
---------Examine Single Row-----------
-calories    420
-duration     50
-Name: day1, dtype: int64
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -730,29 +491,6 @@ Name: day1, dtype: int64
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
-Index: 3 entries, day1 to day3
-Data columns (total 2 columns):
- #   Column    Non-Null Count  Dtype
----  ------    --------------  -----
- 0   calories  3 non-null      int64
- 1   duration  3 non-null      int64
-dtypes: int64(2)
-memory usage: 180.0+ bytes
-None
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -790,43 +528,6 @@ None
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>--Duration Top 10---------
-     Duration  Pulse  Maxpulse  Calories
-69        300    108       143    1500.2
-79        270    100       131    1729.0
-109       210    137       184    1860.4
-60        210    108       160    1376.0
-106       180     90       120     800.3
-90        180    101       127     600.1
-65        180     90       130     800.4
-61        160    110       137    1034.4
-62        160    109       135     853.0
-67        150    107       130     816.0
---Duration Bottom 10------
-     Duration  Pulse  Maxpulse  Calories
-68         20    106       136     110.4
-100        20     95       112      77.7
-89         20     83       107      50.3
-135        20    136       156     189.0
-94         20    150       171     127.4
-95         20    151       168     229.4
-139        20    141       162     222.4
-64         20    110       130     131.4
-112        15    124       139     124.2
-93         15     80       100      50.5
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -875,26 +576,6 @@ None
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>  country_name       cases     deaths
-0          USA  82,649,779  1,018,316
-1        India  43,057,545    522,193
-2       Brazil  30,345,654    662,663
-3       France  28,244,977    145,020
-4      Germany  24,109,433    134,624
-5           UK  21,933,206    173,352
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1034,75 +715,6 @@ None
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The oldest player on the Celtics is:
-Name            Al Horford
-Position                 C
-Team        Boston Celtics
-Age                     35
-Height               6' 9"
-Height_i               6.9
-Weight                 240
-College            Florida
-Salary          27000000.0
-Points                14.2
-Rebounds               6.7
-Assists                3.4
-Name: 0, dtype: object
-The heaviest player on the Celtics is:
-Name            Tacko Fall
-Position                 C
-Team        Boston Celtics
-Age                     25
-Height               7' 5"
-Height_i               7.5
-Weight                 311
-College                UCF
-Salary                 NaN
-Points                 2.5
-Rebounds               2.7
-Assists                0.2
-Name: 5, dtype: object
-The player with the most points on the Celtics is:
-Name          Jayson Tatum
-Position                SF
-Team        Boston Celtics
-Age                     23
-Height               6' 8"
-Height_i               6.8
-Weight                 210
-College               Duke
-Salary          28103500.0
-Points                26.4
-Rebounds               7.4
-Assists                4.3
-Name: 16, dtype: object
-The player with the most assists on the Celtics is:
-Name        Dennis Schroder
-Position                 PG
-Team         Boston Celtics
-Age                      27
-Height                6' 3"
-Height_i                6.3
-Weight                  172
-College                 NaN
-Salary            5890000.0
-Points                 15.4
-Rebounds                3.5
-Assists                 5.8
-Name: 14, dtype: object
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -1140,51 +752,6 @@ Name: 14, dtype: object
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Titanic Data
-Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
-       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',
-       'alive', 'alone'],
-      dtype='object')
-     survived  pclass     sex   age  sibsp  parch   class     fare  \
-0           0       3    male  22.0      1      0   Third   7.2500   
-1           1       1  female  38.0      1      0   First  71.2833   
-2           1       3  female  26.0      0      0   Third   7.9250   
-3           1       1  female  35.0      1      0   First  53.1000   
-4           0       3    male  35.0      0      0   Third   8.0500   
-..        ...     ...     ...   ...    ...    ...     ...      ...   
-886         0       2    male  27.0      0      0  Second  13.0000   
-887         1       1  female  19.0      0      0   First  30.0000   
-888         0       3  female   NaN      1      2   Third  23.4500   
-889         1       1    male  26.0      0      0   First  30.0000   
-890         0       3    male  32.0      0      0   Third   7.7500   
-
-     embark_town  
-0    Southampton  
-1      Cherbourg  
-2    Southampton  
-3    Southampton  
-4    Southampton  
-..           ...  
-886  Southampton  
-887  Southampton  
-888  Southampton  
-889    Cherbourg  
-890   Queenstown  
-
-[891 rows x 9 columns]
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1231,46 +798,6 @@ Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>     survived  pclass  sex   age  sibsp  parch      fare  alone  embarked_C  \
-0           0       3    1  22.0      1      0    7.2500      0         0.0   
-1           1       1    0  38.0      1      0   71.2833      0         1.0   
-2           1       3    0  26.0      0      0    7.9250      1         0.0   
-3           1       1    0  35.0      1      0   53.1000      0         0.0   
-4           0       3    1  35.0      0      0    8.0500      1         0.0   
-..        ...     ...  ...   ...    ...    ...       ...    ...         ...   
-705         0       2    1  39.0      0      0   26.0000      1         0.0   
-706         1       2    0  45.0      0      0   13.5000      1         0.0   
-707         1       1    1  42.0      0      0   26.2875      1         0.0   
-708         1       1    0  22.0      0      0  151.5500      1         0.0   
-710         1       1    0  24.0      0      0   49.5042      1         1.0   
-
-     embarked_Q  embarked_S  
-0           0.0         1.0  
-1           0.0         0.0  
-2           0.0         1.0  
-3           0.0         1.0  
-4           0.0         1.0  
-..          ...         ...  
-705         0.0         1.0  
-706         0.0         1.0  
-707         1.0         0.0  
-708         0.0         1.0  
-710         0.0         0.0  
-
-[564 rows x 11 columns]
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1321,31 +848,6 @@ Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>survived       0.000000
-pclass         2.464072
-sex            0.844311
-age           31.073353
-sibsp          0.562874
-parch          0.398204
-fare          24.835902
-alone          0.616766
-embarked_C     0.185629
-embarked_Q     0.038922
-embarked_S     0.775449
-dtype: float64
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -1370,31 +872,6 @@ dtype: float64
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>survived       1.000000
-pclass         1.878261
-sex            0.326087
-age           28.481522
-sibsp          0.504348
-parch          0.508696
-fare          50.188806
-alone          0.456522
-embarked_C     0.152174
-embarked_Q     0.034783
-embarked_S     0.813043
-dtype: float64
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1423,43 +900,6 @@ dtype: float64
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>survived        1.0000
-pclass          3.0000
-sex             1.0000
-age            80.0000
-sibsp           4.0000
-parch           5.0000
-fare          512.3292
-alone           1.0000
-embarked_C      1.0000
-embarked_Q      1.0000
-embarked_S      1.0000
-dtype: float64
-survived      1.00
-pclass        1.00
-sex           0.00
-age           0.75
-sibsp         0.00
-parch         0.00
-fare          0.00
-alone         0.00
-embarked_C    0.00
-embarked_Q    0.00
-embarked_S    0.00
-dtype: float64
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1530,36 +970,6 @@ dtype: float64
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>DecisionTreeClassifier Accuracy: 0.7705882352941177
-LogisticRegression Accuracy: 0.788235294117647
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/johnmortensen/opt/anaconda3/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-Please also refer to the documentation for alternative solver options:
-    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
-  n_iter_i = _check_optimize_result(
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
