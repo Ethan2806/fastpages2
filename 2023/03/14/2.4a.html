@@ -184,8 +184,11 @@ window.onload = wrap_img;
 <ul>
 <li>Comment on where you have observed these working?  Provide a defintion of purpose.<ol>
 <li>Flask app object</li>
-<li>SQLAlchemy db object</li>
+<li>SQLAlchemy db object </li>
 </ol>
+<ul>
+<li>I have seen SQAlchemy databases in my CPT Project.  I used the SQLite database to store all user inputs that needed to be saved, and it could be re entered.</li>
+</ul>
 </li>
 </ul>
 
@@ -484,12 +487,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created new uid toby
-Created new uid niko
-Created new uid lex
-Created new uid whit
-Created new uid indi
-Created new uid raven
+<pre>Records exist uid toby, or error.
+Records exist uid niko, or error.
+Records exist uid lex, or error.
+Records exist uid whit, or error.
+Records exist uid indi, or error.
+Records exist uid raven, or error.
 </pre>
 </div>
 </div>
@@ -630,8 +633,9 @@ Created new uid raven
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created
- {'id': 7, 'name': 'ethan', 'uid': '', 'dob': '07-28-2006', 'age': 16}
+<pre>Invalid date 1 require YYYY-mm-dd, date defaulted to 03-15-2023
+Created
+ {'id': 8, 'name': '1', 'uid': '1', 'dob': '03-15-2023', 'age': 0}
 </pre>
 </div>
 </div>
@@ -721,7 +725,8 @@ Created new uid raven
   'uid': 'raven',
   'dob': '10-21-1921',
   'age': 101},
- {'id': 7, 'name': 'ethan', 'uid': '', 'dob': '07-28-2006', 'age': 16}]</pre>
+ {'id': 7, 'name': 'ethan', 'uid': '', 'dob': '07-28-2006', 'age': 16},
+ {'id': 8, 'name': '1', 'uid': '1', 'dob': '03-15-2023', 'age': 0}]</pre>
 </div>
 
 </div>
