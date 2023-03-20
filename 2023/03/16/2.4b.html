@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -184,7 +184,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
-<span class="n">database</span> <span class="o">=</span> <span class="s1">'files/sqlite.db'</span> <span class="c1"># this is location of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/sqlite.db'</span> <span class="c1"># this is location of database</span>
 
 <span class="k">def</span> <span class="nf">schema</span><span class="p">():</span>
     
@@ -211,6 +211,24 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, 'id', 'INTEGER', 1, None, 1)
+(1, '_name', 'VARCHAR(255)', 1, None, 0)
+(2, '_uid', 'VARCHAR(255)', 1, None, 0)
+(3, '_password', 'VARCHAR(255)', 1, None, 0)
+(4, '_dob', 'DATE', 0, None, 0)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -224,10 +242,9 @@ window.onload = wrap_img;
 <p>Uses SQL SELECT statement to read data</p>
 </blockquote>
 <ul>
-<li>What is a connection object?  After you google it, what do you think it does?</li>
-<li>Same for cursor object?</li>
-<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
-<li>Is "results" an object?  How do you know?</li>
+<li>What is a connection object?  After you google it, what do you think it does? It is an object that is used to connect to a database so that you can interact with it with various other functions such as the cursor object below. To use it, the argument is a string with the path to the database.</li>
+<li>Same for cursor object? The cursor object can select data and execute code within the database after connecting. It essentially allows you to do what you would otherwise do with sqlite3 in the terminal.</li>
+<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?  There are many special variables, function variables, and class variables in both. The unique attributes that I'm seeing are in_transaction:False, isolation_level: '', row_factory: None, and total_changes: 0 in the conn object and arraysize, lastrowid, row_factory, and rowcount.- Is "results" an object?  How do you know?  It is an object because we can see that it has attributes, which are exclusive to objects.</li>
 </ul>
 
 </div>
@@ -267,6 +284,26 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, 'Thomas Edison', 'toby', 'sha256$LrxnALA7g16juf0U$93b81366f115b8816bf41d244f749ecde88be610871300cdbcac39b23551ddc1', '1847-02-11')
+(2, 'Nikola Tesla', 'niko', 'sha256$A21cKjo2w0pRCbwx$7176f140e463a32691bced254ce11077e5f968349fcbfdaa229c302bcfc2d777', '2023-03-15')
+(3, 'Alexander Graham Bell', 'lex', 'sha256$0jMD8rr78RfFIBLb$12b7a3d07e0a70d453db1466d12c6089d220665668d51a8bf9e376f19e7ea86d', '2023-03-15')
+(4, 'Eli Whitney', 'whit', 'sha256$LnZ1Sja4SPRGvQGu$b478e230faa92aaf9f1ed0d67d8fb3d86331cc89cc653b86ec8d8f27539f9364', '2023-03-15')
+(5, 'Indiana Jones', 'indi', 'sha256$79GaOQL4Pfd4986F$b1fadd8eab31e039b3a00e34a974d25453228d76ac66504caf015f48d8364218', '1920-10-21')
+(6, 'Prelude', 'raven', 'sha256$iM3lvk9QOOG6znNJ$f5a9fcec76388ab560a6c7fe0e5020642d9cce79891128dccfc95df7413cf040', '1921-10-21')
+(7, 'Ethan', '7', 'Mom12345', '2006-07-28')
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -327,10 +364,24 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#create()</span>
+<span class="n">create</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error while executing the INSERT: UNIQUE constraint failed: users._uid
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -430,34 +481,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
-
-<span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to delete"</span><span class="p">)</span>
-
-    <span class="c1"># Connect to the database file</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
-
-    <span class="c1"># Create a cursor object to execute SQL commands</span>
-    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-    
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM users WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">uid</span><span class="p">,))</span>
-        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># The uid was found in the table and the row was deleted</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was successfully deleted"</span><span class="p">)</span>
-        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the DELETE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
-        
-    <span class="c1"># Close the cursor and connection objects</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    
-<span class="c1">#delete()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span>
 </pre></div>
 
     </div>
@@ -519,6 +543,26 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, 'Thomas Edison', 'toby', 'sha256$LrxnALA7g16juf0U$93b81366f115b8816bf41d244f749ecde88be610871300cdbcac39b23551ddc1', '1847-02-11')
+(2, 'Nikola Tesla', 'niko', 'sha256$A21cKjo2w0pRCbwx$7176f140e463a32691bced254ce11077e5f968349fcbfdaa229c302bcfc2d777', '2023-03-15')
+(3, 'Alexander Graham Bell', 'lex', 'sha256$0jMD8rr78RfFIBLb$12b7a3d07e0a70d453db1466d12c6089d220665668d51a8bf9e376f19e7ea86d', '2023-03-15')
+(4, 'Eli Whitney', 'whit', 'sha256$LnZ1Sja4SPRGvQGu$b478e230faa92aaf9f1ed0d67d8fb3d86331cc89cc653b86ec8d8f27539f9364', '2023-03-15')
+(5, 'Indiana Jones', 'indi', 'sha256$79GaOQL4Pfd4986F$b1fadd8eab31e039b3a00e34a974d25453228d76ac66504caf015f48d8364218', '1920-10-21')
+(6, 'Prelude', 'raven', 'sha256$iM3lvk9QOOG6znNJ$f5a9fcec76388ab560a6c7fe0e5020642d9cce79891128dccfc95df7413cf040', '1921-10-21')
+(7, 'Ethan', '7', 'Mom12345', '2006-07-28')
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -542,6 +586,53 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">class</span> <span class="nc">GamesTable</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'Games.db'</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cursor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''CREATE TABLE IF NOT EXISTS Games</span>
+<span class="s1">                              (name TEXT, favorite_game TEXT, age INT)'''</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">insert_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">favorite_game</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''INSERT INTO Games(name, favorite_game, age)</span>
+<span class="s1">                              VALUES(?, ?, ?)'''</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">favorite_game</span><span class="p">,</span> <span class="n">age</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">close_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Usage example</span>
+<span class="n">games_table</span> <span class="o">=</span> <span class="n">GamesTable</span><span class="p">()</span>
+<span class="n">games_table</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name: "</span><span class="p">)</span>
+<span class="n">favorite_game</span> <span class="o">=</span> <span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your favorite game: "</span><span class="p">))</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your age: "</span><span class="p">))</span>
+
+<span class="n">games_table</span><span class="o">.</span><span class="n">insert_data</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">favorite_game</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+
+<span class="n">games_table</span><span class="o">.</span><span class="n">close_connection</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
