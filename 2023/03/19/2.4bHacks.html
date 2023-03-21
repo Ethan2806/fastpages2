@@ -231,7 +231,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>New game Minecraft is added to your database.
+<pre>New game Retro is added to your database.
 </pre>
 </div>
 </div>
@@ -288,10 +288,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, &#39;Ethan Truong&#39;, &#39;16&#39;, &#39;Overwatch&#39;, &#39;PC&#39;)
-(2, &#39;Liav Bar&#39;, &#39;16&#39;, &#39;Clash Of Clans&#39;, &#39;iPhone&#39;)
+<pre>(2, &#39;Liav Bar&#39;, &#39;16&#39;, &#39;Clash Of Clans&#39;, &#39;iPhone&#39;)
 (3, &#39;Bhargav Bhadri&#39;, &#39;16&#39;, &#39;Valorant&#39;, &#39;PC&#39;)
 (4, &#39;Brendan Trinh&#39;, &#39;19&#39;, &#39;Minecraft&#39;, &#39;PS4&#39;)
+(5, &#39;Ethan&#39;, &#39;16&#39;, &#39;Valorant&#39;, &#39;PC&#39;)
 </pre>
 </div>
 </div>
@@ -332,7 +332,7 @@ window.onload = wrap_img;
         <span class="c1"># Updating review for the book</span>
         <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE games SET _game = ? WHERE _name = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">game</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Review for the book is updated to </span><span class="si">{</span><span class="n">game</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Review for the game is updated to </span><span class="si">{</span><span class="n">game</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name not found&quot;</span><span class="p">)</span>
@@ -357,7 +357,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Review for the book is updated to Overwatch
+<pre>Review for the game is updated to Valorant
 </pre>
 </div>
 </div>
@@ -419,7 +419,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Ethan does not exist
+<pre>Successfully deleted game with name 
 </pre>
 </div>
 </div>
