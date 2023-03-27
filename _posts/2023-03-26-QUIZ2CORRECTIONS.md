@@ -1,3 +1,11 @@
+---
+layout: post
+title: Quiz Corrections
+toc: true
+description: Test corrections for collegeboard quiz
+categories: 
+---
+
 # Big Idea 2 Quiz Corrections
 
  ![image](https://user-images.githubusercontent.com/111910633/227858093-99c00f86-5a66-48c9-853f-cdf157d924e4.png)
