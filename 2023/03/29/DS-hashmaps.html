@@ -437,32 +437,12 @@ The Man
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_lover_album</span><span class="p">(</span><span class="n">lover_album</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/ethan2806/fastpages2/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 11</span> in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/ethan2806/fastpages2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> # Print lover_album in more readable format
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/ethan2806/fastpages2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> for k,v in lover_album.items(): # iterate using a for loop for key and value
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/ethan2806/fastpages2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span>     print(str(k) + ": " + str(v))
-
-<span class="ansi-red-fg">NameError</span>: name 'lover_album' is not defined</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -487,10 +467,24 @@ The Man
 
 <span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
 <span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># We can display the property options and format the outputs in a looping menu</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Taylor Swift
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -522,6 +516,117 @@ The Man
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://user-images.githubusercontent.com/111910633/229412614-63407406-cc76-4b8b-a923-43a50bdd86fc.png" alt="image"></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">WelcomeToOBlock</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Welcome To O Block"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"King Von"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2020</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"HipHop"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+<span class="mi">1</span><span class="p">:</span> <span class="s2">"Armed and Dangerous"</span><span class="p">,</span>
+<span class="mi">2</span><span class="p">:</span> <span class="s2">"GTA"</span><span class="p">,</span>
+<span class="mi">3</span><span class="p">:</span> <span class="s2">"Demon"</span><span class="p">,</span>
+<span class="mi">4</span><span class="p">:</span> <span class="s2">"Mine Too"</span><span class="p">,</span>
+<span class="mi">5</span><span class="p">:</span> <span class="s2">"The Code"</span><span class="p">,</span>
+<span class="mi">6</span><span class="p">:</span> <span class="s2">"Why He Told"</span><span class="p">,</span>
+<span class="mi">7</span><span class="p">:</span> <span class="s2">"Back Again"</span><span class="p">,</span>
+<span class="mi">8</span><span class="p">:</span> <span class="s2">"Gleesh Place"</span><span class="p">,</span>
+<span class="mi">9</span><span class="p">:</span> <span class="s2">"Can't Relate"</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">WelcomeToOBlock</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Welcome To O Block', 'artist': 'King Von', 'year': 2020, 'genre': ['HipHop'], 'tracks': {1: 'Armed and Dangerous', 2: 'GTA', 3: 'Demon', 4: 'Mine Too', 5: 'The Code', 6: 'Why He Told', 7: 'Back Again', 8: 'Gleesh Place', 9: "Can't Relate"}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get + index</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">WelcomeToOBlock</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'tracks'</span><span class="p">)[</span><span class="mi">8</span><span class="p">])</span>
+
+<span class="c1"># double indexing</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">WelcomeToOBlock</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">][</span><span class="mi">8</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Gleesh Place
+Gleesh Place
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">WelcomeToOBlock</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Country"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
