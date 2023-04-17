@@ -151,14 +151,14 @@ window.onload = wrap_img;
         <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span> 
-    <span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/games.db&#39;</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/photos.db&#39;</span>
 
     <span class="n">createTblSql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; CREATE TABLE IF NOT EXISTS Games (</span>
 <span class="s2">                                        _id integer PRIMARY KEY,</span>
-<span class="s2">                                        _name text NOT NULL,</span>
-<span class="s2">                                        _age text NOT NULL,</span>
-<span class="s2">                                        _game NOT NULL,</span>
-<span class="s2">                                        _console NOT NULL</span>
+<span class="s2">                                        _photo text NOT NULL,</span>
+<span class="s2">                                        _x integer NOT NULL,</span>
+<span class="s2">                                        _y integer NOT NULL,</span>
+<span class="s2">                                        _difficulty text NOT NULL</span>
 <span class="s2">                                    ); &quot;&quot;&quot;</span>
     <span class="n">connection</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
 
