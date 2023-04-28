@@ -798,6 +798,42 @@ D. It is difficult to change input parameters or conditions when using computer 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">REPEAT</span> <span class="mi">24</span> <span class="n">TIMES</span> <span class="p">{</span>
+
+    <span class="n">litersConsumed</span> <span class="err">←</span> <span class="n">numPeople</span> <span class="o">*</span> <span class="n">litersPerHour</span>
+
+    <span class="n">litersLeft</span> <span class="err">←</span> <span class="n">litersLeft</span> <span class="o">-</span> <span class="n">litersConsumed</span>
+
+    <span class="n">IF</span> <span class="p">(</span><span class="n">litersLeft</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">break</span> <span class="kn">from</span> <span class="nn">loop</span><span class="p">;</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This simulation models the amount of water consumed and remaining after 24 hours based on the number of people and the average amount of water used per hour. This could be useful for estimating water needs for a household or for planning water usage for an event or gathering.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
