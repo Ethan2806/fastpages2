@@ -1,6 +1,15 @@
+---
+layout: post
+title: Test Corrections
+toc: true
+description: Corrections and Explanation
+categories:
+---
 # Test Corrections
-
-
+![image](https://user-images.githubusercontent.com/111910633/235504823-57e66b30-4b7b-49dc-a113-026f564df93a.png)
+# 16
+- Question : While debugging the program, the student realizes that the loop never terminates. Which of the following changes can be made so that the program works as intended?
+- Answer : Inserting index  ←  index - 1 between lines 7 and 8
 # 23 
 - Question : "Which of the following is NOT a reason why dogs make great pets?
 - Answer : D. They are hypoallergenic
