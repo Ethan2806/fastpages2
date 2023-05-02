@@ -101,6 +101,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     +-----------+         +-----------+         +-----------+
 
     ![1](https://user-images.githubusercontent.com/111910633/235754172-2cd41afa-174a-4d42-ad23-1ed5c7d6d7e9.png)
+    
 ```
 
 The "http" layer is an application layer protocol in the TCP/IP stack, used for ***communication between web browsers and web servers***. It is the protocol used for transmitting data over the World Wide Web.
