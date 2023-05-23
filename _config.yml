@@ -126,3 +126,6 @@ feed:
   
 exclude:
   - settings.ini
+
+  ssl_certificate: none
+
